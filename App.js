@@ -1,28 +1,13 @@
-import * as React from 'react';
-import {View,Text,Button,StyleSheet} from 'react-native';
-import AppHeader from './components/AppHeader';
+import React, { Component } from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
-import SummaryScreen from './screens/SummaryScreen';
-import {createAppContainer, createSwitchNavigator}from 'react-navigation';
-export default class App extends React.Component{
 
+export default class App extends Component{
   render(){
     return(
-      <View>
-      <AppHeader/>
-      <AppContainer/>
+      <View style={{flex:1}}>
+        <HomeScreen />
       </View>
     )
   }
-  
-
 }
-var AppNavigator = createSwitchNavigator({
-  HomeScreen:HomeScreen,
-  SummaryScreen:SummaryScreen,
-  
-})
-
-const AppContainer = createAppContainer(AppNavigator)
-
-
